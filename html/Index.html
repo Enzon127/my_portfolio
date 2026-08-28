@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<body class="bg-black text-white">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Leung King Wah</title>
+
+  <!--fonts-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preload" href="/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" as="image" href="/images/landingpage_bg.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+    /* Default navbar style */
+    #navbar {
+      background-color: rgba(0, 0, 0, 0.402);
+      backdrop-filter: blur(6px);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Solid style when scrolled */
+    #navbar.scrolled {
+      background-color: #000000; /* solid dark */
+      backdrop-filter: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* shadow so you can SEE the change */
+    }
+    
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-overlay { 
+      background: linear-gradient(90deg, rgba(10,10,9,.94) 0%, rgba(20,19,18,.76) 48%, rgba(20,19,18,.34) 100%); 
+    }
+    .hero-section::after { 
+      content:""; 
+      position:absolute; 
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:55%; /* smoother blend */
+      background: linear-gradient(to bottom, rgba(20,19,18,0) 0%, rgba(20,19,18,.5) 35%, rgba(20,19,18,.85) 70%, #141312 100%); 
+      pointer-events:none; 
+    }
+    .hero-section > .relative { 
+      z-index: 2; /* keeps hero content above gradient */
+      }
+
+    <!--Animations-->
+    .hero-section > .relative { z-index:2; }
+    @keyframes rise { 
+      0% {opacity: 0; transform: translateY(30px);} 
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .reveal {animation:rise .72s ease-out both;}
+    .reveal-2 {animation:rise .72s .12s both;}
+    .reveal-3 {animation:rise .72s .24s both;}
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  
+  <!-- Navigation Bar -->
+  <header id="navbar" class="fixed w-full top-0 z-50 nav-glass">
+    <nav class="max-w-[1440px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between" aria-label="Project navigation">
+
+      <!-- Logo -->
+      <a href="#home" class="text-white font-bold font-[Fraunces] text-lg hover:text-[#00cdcd] transition-colors">
+        My Portfolio
+      </a>
+
+      <!-- Right-aligned Links -->
+      <div class="ml-auto flex items-center gap-0 sm:gap-2 lg:gap-4 text-white font-medium">
+        <a href="#home" class="px-3 py-2 hover:text-[#00cdcd]">Home</a>
+        <span class="text-white/60">|</span>
+        <a href="#projects" class="px-3 py-2 hover:text-[#00cdcd]">Projects</a>
+        <span class="text-white/60">|</span>
+        <a href="#contact" class="px-3 py-2 hover:text-[#00cdcd]">Contact</a>
+      </div>
+  </header>
+
+  <!-- Content -->
+  <main>
+
+    <section id="home" class="hero-section relative min-h-screen h-screen w-full overflow-hidden flex items-end">
+
+      <!-- Full-width background image -->
+      <img data-template-id="hero-image" loading="lazy"
+        class="absolute inset-0 w-full h-full object-cover"
+        src="../images/landingpage_bg.png"
+        alt="Dark overhead workspace.">
+
+      <!-- Overlay -->
+      <div class="hero-overlay absolute inset-0 bg-black/50"></div>
+
+      <!-- Content container -->
+      <div class="relative -top-20 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-6 sm:pb-10 text-white">
+        <div class="grid lg:grid-cols-[1.35fr_.65fr] gap-12 items-center">
+          <div>
+            <p class="text-[#d8fb57] font-bold tracking-widest mb-6"> </p>
+            <h1 class="font-[Anton] text-[#00cdcd] text-[110px] sm:text-[133px] leading-[1.1] relative top-6 -left-1 reveal">
+              LEUNG KING WAH
+            </h1>
+            <p class="mt-4 max-w-xl text-lg sm:text-xl italic text-gray-400 reveal-2">
+              Mechanical engineer. Product Designer.
+            </p>
+            <a href="#projects"
+              class="relative -top-2 inline-flex items-center gap-1 mt-8 px-6 py-4 font-bold border border-gray-400 hover:shadow-[6px_6px_0_#8f887e] transition-shadow text-gray-400 reveal-3 cursor-pointer">
+              Explore my work
+              <i data-lucide="arrow-down-right" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="w-full bg-[#141312] pt-24 sm:pt-32 pb-20 sm:pb-28 text-white relative z-[3]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 grid lg:grid-cols-[.83fr_1.17fr] gap-12 lg:gap-24 items-center">
+        
+        <!-- Image -->
+        <div class="relative">
+          <div class="absolute inset-0 lg:translate-x-4 lg:translate-y-4 bg-[#00cdcd]"></div>
+          <img loading="lazy"
+              class="relative w-full aspect-[4/5] object-cover grayscale"
+              src="../images/Me.jpg"
+              alt="Me.">
+        </div>
+        
+        <!-- Text -->
+        <div>
+          <p class="text-[#00cdcd] mb-4 font-bold tracking-widest text-sm uppercase">
+            About me
+          </p>
+          <h2 class="font-[Fraunces] text-white font-bold text-2xl max-w-3xl">
+            Turning ideas into practical solutions.
+          </h2>
+          <p class="mt-8 max-w-3xl text-lg font-semibold leading-relaxed text-white/90">
+            Mechanical engineer with hands-on project experience and strong problem-solving skills. <br>
+            Product designer focused on transforming user needs into manufacturable products. <br>
+            Team player committed to bridging creativity and engineering for effective outcomes.
+          </p>
+          
+          <!-- Skills -->
+          <div class="mt-8 pt-6 border-t border-[#aaa39a]">
+            <h3 class="font-bold mb-4 text-[#ded8ce] text-lg">
+              What I bring to the table
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Computer-Aided Design</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Design for Manufacturing and Assembly</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Rapid Prototyping</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Manufacturing</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Machining/Tooling</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">Design Thinking</span>
+              <span class="px-3 py-2 bg-[#ded8ce] text-sm font-semibold text-[#141312]">System Thinking</span>
+              <span class="mt-2 ml-2 italic text-sm text-gray-400">and more...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projects" class="w-full py-40 bg-[#141312] flex items-center justify-center">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8">
+
+      <!-- Section Header -->
+      <div class="grid lg:grid-cols-[1.25fr_.75fr] gap-8 items-end">
+        <div>
+          <p class="text-[#00cdcd] mb-4 font-bold tracking-widest text-sm uppercase">
+            Past projects
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Panel One -->
+      <a href="../projects/blog.html" class="block">
+        <article class="project-panel mt-8 grid lg:grid-cols-2 bg-[#ded8ce] text-[#21201e] overflow-hidden hover:shadow-[8px_8px_0_#00cdcd] transition-shadow duration-300 cursor-pointer">
+          <img loading="lazy" class="w-full h-full min-h-[340px] object-cover" src="../images/blog_thumb.png" alt="Blog">
+          <div class="p-7 sm:p-12 flex flex-col justify-between">
+            <div>
+              <p class="text-[#4d4640] font-semibold tracking-widest text-sm">Consumer Electronics | 2026</p>
+              <h3 class="mt-6 text-3xl sm:text-4xl font-bold text-[#e99d2c]">Blōg</h3>
+              <p class="mt-4 text-base leading-normal text-[#4d4640] italic">
+                A real time dog monitoring system for you to see when you cannot and act when you should.
+              </p>
+            </div>
+            <div class="mt-10 border-t border-[#aaa39a] pt-5 gap-5">
+              <div>
+                <p class="text-[#6b655e] tracking-widest text-sm">CAD Modeling · Manufacturing · Design</p>
+                <p class="mt-2 font-bold text-[#141312]"></p>
+              </div>
+              <div>
+                <p class="text-[#6b655e] tracking-widest text-sm"></p>
+                <p class="mt-2 font-bold text-[#141312]"></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </a>
+
+      <!-- Project Panel Two -->
+      <a href="../projects/guinn.html" class="block">
+        <article class="project-panel mt-8 grid lg:grid-cols-2 bg-[#ded8ce] text-[#141312] overflow-hidden hover:shadow-[8px_8px_0_#00cdcd] transition-shadow duration-300 cursor-pointer">
+          <img loading="lazy" class="w-full h-full min-h-[340px] object-cover" src="../images/guinn_thumb.png" alt="Landing Page - 3">
+          <div class="p-7 sm:p-12 flex flex-col justify-between">
+            <div>
+              <p class="text-[#4d4640] font-semibold tracking-widest text-sm">Underwater Robotics | 2025</p>
+              <h3 class="mt-6 text-3xl sm:text-4xl font-bold text-[#5c969e]">Guinn</h3>
+              <p class="mt-4 text-base leading-normal text-[#4d4640] italic">
+                An underwater cleaning robot that removes algae and debris in tanks.
+              </p>
+            </div>
+            <div class="mt-6 border-t border-[#aaa39a] pt-5 gap-5">
+              <div>
+                <p class="text-[#6b655e] tracking-widest text-sm">CAD Modeling · Manufacturing · Design</p>
+                <p class="mt-2 font-bold text-[#141312]"></p>
+              </div>
+              <div>
+                <p class="text-[#6b655e] tracking-widest text-sm"></p>
+                <p class="mt-2 font-bold text-[#141312]"></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </a>
+    </div>
+    </section>
+
+    <section id="contact" class="w-full bg-[#00cdcd] py-20 sm:py-32">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 grid lg:grid-cols-[.9fr_1.1fr] gap-14">
+        
+        <!-- Left Column: Personal Contacts -->
+        <div>
+          <p class="text-[#000000] font-bold tracking-widest text-sm mb-5">CONTACT</p>
+          <h2 class="text-2xl sm:text-3xl font-bold font-[Fraunces] text-[#141312] max-w-xl">Let’s make something together.</h2>
+          <p class="mt-8 text-lg leading-relaxed text-[#141312] max-w-md italic">
+            I’m always open to new ideas and ambitious collaborations. Don't hesitate to contact me.
+          </p>
+
+          <div class="mt-10 space-y-4 mb-40">
+            <a href="mailto:kwleungaw@connect.ust.hk" class="flex items-center gap-3 font-bold text-[#141312] hover:text-[#FFFFFF]">
+              <i data-lucide="mail" width="19" height="19" aria-hidden="true"></i>
+              <span>kwleungaw@connect.ust.hk</span>
+            </a>
+            <a href="https://www.linkedin.com/in/king-wah-leung-46a58a394" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 font-bold text-[#141312] hover:text-[#FFFFFF]">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                  width="19" height="19" 
+                  fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554v-11.5h3.414v1.571h.049c.476-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.326zm-14.447-13.452c-1.144 0-2.072-.928-2.072-2.072s.928-2.072 2.072-2.072 2.072.928 2.072 2.072-.928 2.072-2.072 2.072zm1.777 13.452h-3.554v-11.5h3.554v11.5zm14.223-20h-18c-1.105 0-2 .895-2 2v18c0 1.104.895 2 2 2h18c1.104 0 2-.896 2-2v-18c0-1.105-.896-2-2-2z"/>
+              </svg>
+              <span>Ansonleung</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="w-full bg-[#141312] py-7">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      
+      <!-- Left: Copyright -->
+      <p class="text-white/70 text-base">
+        © 2026 Anson Leung. Designed with intention.
+      </p>
+      
+      <!-- Right: Back to top -->
+      <a href="#home" class="inline-flex items-center gap-1 font-bold text-[#00cdcd] hover:text-white transition-colors duration-300 text-base">
+        Back to top
+        <i data-lucide="arrow-up" width="17" height="17" stroke-width="3"></i> 
+      </a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      lucide.createIcons();
+    });
+  </script><script>
+    window.addEventListener("load", () => {
+      lucide.createIcons();
+    });
+  </script>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const mobileLinks = document.getElementById("mobile-links");
+    // Toggle mobile menu
+    menuButton.addEventListener("click", () => {
+      mobileLinks.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>

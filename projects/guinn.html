@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+  
+<head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260821-05-d0038b4","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/50d846425a1e5082.telemetry_sdk.js" integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Guinn</title>
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  
+  <!--fonts-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preload" href="/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    #navbar {
+      background-color: #001c2da2;
+      backdrop-filter: blur(6px);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Solid style when scrolled */
+    #navbar.scrolled {
+      background-color: #001c2d; /* solid dark */
+      backdrop-filter: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* shadow so you can SEE the change */
+    }
+
+    :root {
+      --ink: #c4f0f5;
+      --muted: #0a161e;
+      --paper: #3c6d8c;
+      --line: #dfc98f;
+      --moss: #6b3f20;
+      --lime: #85dbe7;
+      --sand: #f3df9b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: "DM Sans", sans-serif; color: var(--ink); background: var(--paper); }
+    h1, h2, h3 { font-family: "Fraunces", serif; }
+    .page-shell { width: 100%; overflow: hidden; }
+    .nav-glass { background: rgba(246,245,239,.9); backdrop-filter: blur(14px); }
+
+    .hero-section {
+      background-image: linear-gradient(rgba(49,93,79,.06) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(49,93,79,.06) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+
+    .hero-overlay { 
+      background: linear-gradient(90deg, #3c6d8ceb 0%, #3c6d8c63 20%, #3c6d8c05 100%); 
+    }
+
+    .hero-section::after { 
+      content:""; 
+      position:absolute; 
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:55%; /* smoother blend */
+      background: linear-gradient(to bottom, #3c6d8c00 0%, #3c6d8c49 35%, #3c6d8c92 70%, #3c6d8c 100%); 
+      pointer-events:none; 
+    }
+
+    .hero-section > .relative { 
+      z-index: 2; /* keeps hero content above gradient */
+    }
+    
+    .background-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background-section::after { 
+      content:""; 
+      position:absolute;
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:80%; /* smoother blend */
+      background: linear-gradient(to bottom, #24526e00 0%, #24526e49 35%, #24526e92 70%, #24526e 100%); 
+      pointer-events:none; 
+    }
+
+    .background-section > .relative {
+      position: relative; 
+      z-index: 2; /* keeps hero content above gradient */
+    }
+
+    .research-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .research-section::after { 
+      content:""; 
+      position:absolute;
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:90%; /* smoother blend */
+      background: linear-gradient(to bottom, #143c5500 0%, #143c5549 35%, #143c5592 70%, #143c55 100%); 
+      pointer-events:none; 
+    }
+
+    .research-section > .relative { 
+      z-index: 2; /* keeps hero content above gradient */
+    }
+
+    .problem-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-section::after { 
+      content:""; 
+      position:absolute;
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:70%; /* smoother blend */
+      background: linear-gradient(to bottom, #00314f00 0%, #00314f49 35%, #00314f92 70%, #00314f 100%); 
+      pointer-events:none; 
+    }
+
+    .problem-section > .relative { 
+      z-index: 2; /* keeps hero content above gradient */
+    }
+
+    .gal-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gal-section::after { 
+      content:""; 
+      position:absolute;
+      z-index:1; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      height:90%; /* smoother blend */
+      background: linear-gradient(to bottom, #001c2d00 0%, #001c2d49 35%, #001c2d92 70%, #001c2d 100%); 
+      pointer-events:none; 
+    }
+
+    .gal-section > .relative { 
+      z-index: 2; /* keeps hero content above gradient */
+    }
+    
+    .eyebrow { letter-spacing: .15em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+    .reveal { animation: reveal .72s both cubic-bezier(.22,.8,.24,1); }
+    .delay-1 { animation-delay: .1s; }
+    .delay-2 { animation-delay: .2s; }
+    .delay-3 { animation-delay: .3s; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .research-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .research-card:hover { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(23,35,31,.09); }
+    .system-line { background: linear-gradient(90deg, #009eb3, #85dbe7 60%, #b1c2ba 98%); }
+    .anchor-section { scroll-margin-top: 5rem; }
+    .nav-link:focus-visible, button:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; }
+    }
+  </style>
+
+  <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" 
+    type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q==">
+  </script>
+  <script src="/_sdk/a27879be4562f807.resizing_sdk.js" 
+    type="text/javascript" integrity="sha512-trcxRwz+QLrzK0Dqg95xqVRryR7WtWui2YopXyzOIr3WMde3j/xCRgT63/b/EAg7klDsAOuHzoRgoryhwm8QFw==">
+  </script>
+
+ </head>
+
+ <body data-template-id="__page-root">
+  <div class="page-shell">
+    
+    <header id="navbar" class="fixed w-full top-0 z-30 nav-glass">
+      <nav class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-8 h-16 flex items-center justify-between" 
+        aria-label="Project navigation">
+        
+        <!-- Brand -->
+        <a href="../html/Index.html#projects" 
+          class="flex items-center gap-0 font-bold tracking-tight text-white hover:text-[#85dbe7]" 
+          aria-label="Return to projects section">
+          <i data-lucide="chevron-left" class="w-6 h-6" stroke-width="3"></i>
+          <span data-template-id="nav-brand" class="font-[Fruances] font-bold text-2xl">Guinn</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="ml-auto flex items-center gap-0 sm:gap-2 lg:gap-4 text-white font-medium">
+          <a class="nav-link px-3 py-2 hover:text-[#85dbe7]" href="#background">Background</a>
+          <span class="text-white/60">|</span>
+          <a class="nav-link px-3 py-2 hover:text-[#85dbe7]" href="#problem">Problem</a>
+          <span class="text-white/60">|</span>
+          <a class="nav-link px-3 py-2 hover:text-[#85dbe7]" href="#solution">Solution</a>
+        </div>
+      </nav>
+      <div id="mobile-links" class="hidden flex-col gap-2 px-6 pb-6 text-white md:hidden">
+        <a href="#background" class="py-3 border-b border-white/20 hover:text-lime-300">Background</a>
+        <a href="#problem" class="py-3 border-b border-white/20 hover:text-lime-300">Problem</a>
+        <a href="#solution" class="py-3 text-coral font-bold hover:text-pink-400">Solution</a>
+      </div>
+    </header>
+    
+    <main class="bg-[#00314f]">
+
+      <section id="intro" class="hero-section relative bg-[#3c6d8c] min-h-screen h-screen w-full overflow-hidden">
+
+        <img data-template-id="hero-image" loading="lazy"
+          class="absolute inset-0 w-full h-full object-cover"
+          src="../images/guinn/Background.jpg"
+          alt="Dark overhead workspace.">
+        
+        <div class="hero-overlay absolute inset-0 bg-[#3c6d8c]/10"></div>
+
+        <div class="pt-10 relative max-w-full sm:max-w-4xl lg:max-w-[1440px] mx-auto h-full grid lg:grid-cols-12 gap-8 pb-20 lg:pb-62 items-end justify-center">
+          <div class="px-5 sm:px-8 lg:col-span-7 sm:pt-20 flex flex-col justify-end">
+            <p data-template-id="hero-kicker" 
+              class="eyebrow text-[#6b3f20] reveal" 
+              style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+              Underwater Robotics | 2026
+            </p>
+            <h1 data-template-id="hero-title" 
+              class="font-[Anton] mt-5 text-6xl sm:text-7xl lg:text-9xl leading-[.88] tracking-tight reveal delay-1" 
+              style="color: #c4f0f5; font-weight: 400; font-style: normal; font-size: 40px;">
+              Guinn
+            </h1>
+            <p data-template-id="hero-tagline" 
+              class="font-[Fraunces] max-w-xl mt-8 text-2xl sm:text-3xl font-medium leading-tight reveal delay-2" 
+              style="color: #6db6a5; font-weight: 700; font-style: normal; font-size: 30px;">
+              Beneath the surface, <br>
+              Beyond the ordinary.
+            </p>
+            <p data-template-id="hero-intro" 
+              class="canva-text max-w-2xl mt-5 mb-24 text-lg leading-relaxed text-[#52635b] reveal delay-3" 
+              style="color: #6db6a5; font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">
+              An underwater tank clenaing robot equipped with scrapers and vacuum cleaner. Uniquely designed for algae and debris removal.
+            </p>
+            <div class="mt-6 grid grid-cols-[0.45fr_1.55fr] gap-8 max-w-xl border-y border-[#b1c2ba]/80 py-5">
+              <div class="pr-4">
+                <p class="eyebrow text-[#66b1bb]">System</p>
+                <p data-template-id="hero-meta-system" 
+                  class="canva-text mt-2 font-semibold" 
+                  style="color: #b1c2ba; font-weight: 700; font-style: normal; font-size: 16px;">
+                  Robotics
+                </p>
+              </div>
+              <div class="px-4 border-[#66b1bb]/80">
+                <p class="eyebrow text-[#66b1bb]">
+                  My Focus</p>
+                <p data-template-id="hero-meta-focus"
+                  class="canva-text mt-2 font-semibold" 
+                  style="color: #b1c2ba; font-weight: 700; font-style: normal; font-size: 16px;">
+                  CAD Modeling · Manufacturing · Design
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="background-section bg-[#3c6d8c] lg:scroll-mt-20 w-full">
+        <div class="relative max-w-full sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pt-20 pb-16 justify-center">
+          <div class="editorial-grid">
+            <div class= "grid gap-8 py-10 lg:grid-cols-[.6fr_1.4fr] lg:py-10">
+              <div>
+                <p data-template-id="background-label" 
+                  class="canva-text eyebrow" 
+                  style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">
+                  Context
+                </p>
+                <h2 data-template-id="background-title" 
+                  class="canva-text display-type mt-2 max-w-4xl text-[clamp(3.1rem,7vw,7rem)] font-[Fraunces]" 
+                  style="color: #009eb3; font-weight: 700; font-size: 24px;">
+                  Project Background
+                </h2>
+              </div>
+              <div>
+                <p data-template-id="background-copy" 
+                  class="canva-text text-lg leading-relaxed text-[#464640] sm:text-xl" 
+                  style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 20px; line-height: 1.5;">
+                  Water tanks often suffer from algae growth and debris buildup, 
+                  which can compromise water quality and require frequent, labor‑intensive maintenance. 
+                  Manual cleaning is not only inefficient but also poses safety risks in submerged environments. 
+                  To address these challenges, we reached out to Ocean Park Hong Kong and started developing Guinn as a cleaning helper.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative mt-10 mb-20 rounded-xl overflow-hidden">
+            <img data-template-id="hero-image" 
+              loading="lazy" class="block w-full h-[320px] object-cover" 
+              src="../images/guinn/dolphins.png" 
+              alt="Dolphins"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="demographic" class="w-full bg-[#24526e]">
+        <div class="max-w-full pt-10 sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8">
+          <div class="editorial-grid">
+            <div class="content-span py-20 lg:py-28">
+              <div class="flex flex-col justify-between gap-8 pb-10 lg:flex-row">
+                <p data-template-id="demographic-label" 
+                  class="canva-text eyebrow" 
+                  style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">
+                  Target audience
+                </p>
+                <h2 data-template-id="demographic-title" 
+                  class="canva-text font-[Fraunces] max-w-3xl" 
+                  style="color: #b1c2ba; font-weight: 700; font-style: normal; font-size: 24px;">
+                  User Demographic
+                </h2>
+              </div>
+              <div class="mt-10 text-[#b1c2ba] grid gap-x-16 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+                <article class="insight-card border-t-2 border-[#b1c2ba] pt-8">
+                  <span class="text-sm font-bold">01</span>
+                  <p data-template-id="demo-insight-one" 
+                    class="canva-text mt-5 text-lg font-medium leading-snug" 
+                    style="font-weight: 500; font-style: normal; font-size: 18px; line-height: 1.3;">
+                    Younger to mid-career aquarium divers with specialized training.
+                  </p>
+                </article>
+                <article class="insight-card border-t-2 border-[#b1c2ba] pt-8">
+                  <span class="text-sm font-bold">02</span>
+                  <p data-template-id="demo-insight-two" 
+                    class="canva-text mt-5 text-lg font-medium leading-snug" 
+                    style="font-weight: 500; font-style: normal; font-size: 18px; line-height: 1.3;">
+                    Long working hours that blend physical labor with animal care.
+                </article>
+                <article class="insight-card border-t-2 border-[#b1c2ba] pt-8">
+                  <span class="text-sm font-bold">03</span>
+                  <p data-template-id="demo-insight-three" 
+                    class="canva-text mt-5 text-lg font-medium leading-snug" 
+                    style="font-weight: 500; font-style: normal; font-size: 18px; line-height: 1.3;">
+                    Physically demanding tasks that may lead to occupational risks.
+                  </p>
+                </article>
+                <article class="insight-card border-t-2 border-[#b1c2ba] pt-8">
+                  <span class="text-sm font-bold">04</span>
+                  <p data-template-id="demo-insight-four" 
+                    class="canva-text mt-5 text-lg font-medium leading-snug" 
+                    style="font-weight: 500; font-style: normal; font-size: 18px; line-height: 1.3;">
+                    Interest in tools that reduce strain and improve efficiency.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="research-section w-full bg-[#24526e] text-white">
+        <div class="relative pt-32 max-w-full sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pb-32 justify-center">
+          <div class="grid lg:grid-cols-12 gap-10 items-end">
+            <div class="lg:col-span-7">
+              <p data-template-id="research-eyebrow" 
+                class="canva-text eyebrow text-[#f4c542]" 
+                style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+               Research
+              </p>
+              <h2 data-template-id="research-title" 
+                class="canva-text mt-4 text-4xl sm:text-5xl leading-tight" 
+                style="color: #b1c2ba; font-weight: 700; font-style: normal; font-size: 24px;">
+                Listening beyond the dashboard.
+              </h2>
+            </div>
+            <div data-template-id="interview-panel" class="relative canva-panel lg:col-span-5 border-r-4 border-[#b1c2ba] pr-4">
+              <p data-template-id="interview-label" class="text-right eyebrow tracking-tight" 
+                style="color:#b1c2ba; font-weight: 700; font-style: normal; font-size: 20px;">
+                Ocean Park Hong Kong
+              </p>
+              <p data-template-id="interview-size" class="text-right mt-3 text-4xl sm:text-5xl font-semibold tracking-tight" 
+                style="color: #b1c2ba; font-weight: 700; font-style: normal; font-size: 16px;">
+                INTERVIEW
+              </p>
+            </div>
+          </div>
+
+          <div class="relative mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+
+            <article data-template-id="insight-one" class="relative canva-card rounded-2xl bg-white/5 border border-white/15 p-6 
+              transform hover:scale-[1.02] hover:shadow-[0_0_12px_0_rgba(255,248,230,0.5)]" 
+              style="background: rgba(255, 255, 255, 0.05);">
+              <div class="flex items-center gap-4">
+                <span class="text-[#c5e56b] text-[19px] font-bold">01</span>
+                <h3 data-template-id="insight-one-title" 
+                  class="canva-text text-2xl" 
+                  style="color: #b1c2ba; font-weight: 600; font-style: normal; font-size: 19px;">
+                  Limited Workforce
+                </h3>
+              </div>
+              <p data-template-id="insight-one-copy" 
+                class="canva-text mt-3 text-white/70 leading-relaxed" 
+                style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">
+                With only a few dedicated divers available, 
+                the workload becomes overwhelming and many others have to pull double duties.
+              </p>
+            </article>
+
+            <article data-template-id="insight-two" class="canva-card rounded-2xl bg-white/5 border border-white/15 p-6 
+              transform hover:scale-[1.02] hover:shadow-[0_0_12px_0_rgba(255,248,230,0.5)]" 
+              style="background: rgba(255, 255, 255, 0.05);">
+              <div class="flex items-center gap-4">
+                <span class="text-[#c5e56b] text-[19px] font-bold">02</span>
+                <h3 data-template-id="insight-two-title" 
+                  class="canva-text text-2xl" 
+                  style="color: #b1c2ba; font-weight: 600; font-style: normal; font-size: 19px;">
+                  Time‑Intensive Cleaning
+                </h3>
+              </div>
+              <p data-template-id="insight-two-copy" 
+                class="canva-text mt-3 text-white/70 leading-relaxed" 
+                style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">
+                Divers spend long hours scrubbing tank walls and removing debris. The process is slow and physically demanding.
+              </p>
+            </article>
+
+            <article data-template-id="insight-three" class="canva-card rounded-2xl bg-white/5 border border-white/15 p-6 
+              transform hover:scale-[1.02] hover:shadow-[0_0_12px_0_rgba(255,248,230,0.5)]" 
+              style="background: rgba(255, 255, 255, 0.05);">
+              <div class="flex items-center gap-4">
+                <span class="text-[#c5e56b] text-[19px] font-bold">03</span>
+                <h3 data-template-id="insight-three-title" 
+                  class="canva-text text-2xl" 
+                  style="color: #b1c2ba; font-weight: 600; font-style: normal; font-size: 19px;">
+                  Persistent Algae Types
+                </h3>
+              </div>
+              <p data-template-id="insight-three-copy" 
+                class="canva-text mt-3 text-white/70 leading-relaxed" 
+                style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">
+                Green and black algae are the most common forms found in aquariums. 
+                They grow quickly and require repeated manual effort to remove.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="problem-section bg-[#143c55] scroll-mt-8 lg:scroll-mb-16">
+        <div class="relative max-w-full pt-10 sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pb-20">
+          <div class="mt-20">
+            <p data-template-id="problem-eyebrow" 
+              class="canva-text eyebrow text-[#315d4f]" 
+              style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+              Problem Definition
+            </p>
+            <h2 data-template-id="problem-title" 
+              class="canva-text mt-4 text-4xl sm:text-5xl leading-tight" 
+              style="color: #009eb3; font-weight: 700; font-style: normal; font-size: 24px;">
+              The gap between seeing and knowing.
+            </h2>
+            <p class="mt-8 pl-4 canva-text max-w-6xl text-2xl sm:text-3xl leading-snug font-medium border-l-4 border-[#66b1bb]"
+              style="color: #b1c2ba; font-weight: 500; font-style: normal; font-size: 24px; line-height: 1.4;">
+              Aquarium divers spent most of their days cleaning aquariums and tanks, 
+              which takes away their time to do more meaningful work for animal welfare.
+            </p>
+          </div>
+          <div class="editorial-grid">
+            <div class="content-span pt-8">
+              <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+                <div class="pt-16">
+                  <p data-template-id="painpoints-eyebrow" class="canva-text eyebrow text-[#315d4f]" 
+                    style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+                    Problem Breakdown
+                </p>
+                </div>
+              </div>
+              <div class="h-4"> </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">01 /</p>
+                        <h3 data-template-id="pain-one-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          What
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-one-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        Cleaning aquariums and tanks takes a lot of time.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">02 /</p>
+                        <h3 data-template-id="pain-two-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          When
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-two-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        Maintenance time when no animals are present.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">03 /</p>
+                        <h3 data-template-id="pain-three-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          Where
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-three-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        Ocean Park’s dolphin tanks and aquariums (excluding themings).
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">04 /</p>
+                        <h3 data-template-id="pain-three-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          Who
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-three-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        Aquarium divers and keepers.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">05 /</p>
+                        <h3 data-template-id="pain-three-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          Why
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-three-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        More time to care for aminals.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="py-9">
+                  <div class="border-[#b1c2ba] border-l">
+                    <div class="pl-8">
+                      <div class="flex gap-2 items-center">
+                        <p class="text-xl font-bold">06 / </p>
+                        <h3 data-template-id="pain-three-title" class="canva-text text-2xl font-semibold tracking-tight" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 24px;">
+                          How
+                        </h3>
+                      </div>
+                      <p data-template-id="pain-three-copy" class="canva-text mt-4 max-w-xs leading-relaxed text-[#50504b]" 
+                        style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">
+                        Clean tanks with minimal manual effort.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="solution" class="scroll-mt-8 lg:scroll-mb-16">
+        <div class="max-w-full pt-32 sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pb-28">
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="lg:col-span-7">
+              <p data-template-id="solution-eyebrow" 
+                class="canva-text eyebrow text-[#315d4f]" 
+                style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+                Our Solution
+              </p>
+              <h2 data-template-id="solution-title" 
+                class="canva-text mt-4 text-4xl sm:text-5xl leading-tight" 
+                style="color: #009eb3; font-weight: 700; font-style: normal; font-size: 24px;">
+                A robot for underwater cleaning.
+              </h2>
+              <p data-template-id="solution-copy" 
+                class="canva-text mt-10 max-w-3xl text-lg leading-relaxed text-[#52635b]" 
+                style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">
+                Guinn is an underwater tank cleaning robot with 5 major subsystems: a chasis, a
+                vacuum cleaner, scrapers, navigation system and communication system. It can operate
+                under 5 meters of salt water manualy or automaticaly.
+              </p>
+
+              <div class="mt-16 rounded-[1.5rem] p-6 sm:p-10 bg-[#00000033]">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                  <div>
+                    <p data-template-id="system-label" 
+                      class="canva-text eyebrow text-[#315d4f]" 
+                      style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+                      The system
+                    </p>
+                    <h3 data-template-id="system-title" 
+                      class="canva-text mt-2 text-3xl" 
+                      style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                      5 subsystems in 1.
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="mt-8 lg:max-w-3xl grid md:grid-cols-3 gap-6 relative">
+                  
+                  <div class="hidden md:block system-line absolute top-7 left-[1%] right-[0%] h-[2px]"></div>
+
+                  <article class="relative">
+                    <div class="flex flex-row md:flex-col gap-x-8 items-center md:items-start">
+                      <div class="mt-4 sm:mt-0 w-12 h-12 rounded-full bg-[#315d4f] text-[#c5e56b] flex items-center justify-center">
+                        <i data-lucide="cog" width="24" height="24"></i>
+                      </div>
+                      <div>
+                        <h3 data-template-id="layer-one-title" 
+                          class="canva-text mt-0 md:mt-5 text-2xl" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                          3 Physical Modules
+                        </h3>
+                        <ul class="list-disc pl-4 mt-2 text-[16px] lg:text-[12px] text-[#b1c2ba] leading-relaxed">
+                          <li>Tread-based chasis for movements</li>
+                          <li>Rubber scrapers for algae removal.</li>
+                          <li>Vacuum Chamber for debris isolation.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="relative">
+                    <div class="flex flex-row md:flex-col gap-x-8 items-center md:items-start">
+                      <div class="mt-4 sm:mt-0 w-12 h-12 rounded-full bg-[#315d4f] text-[#c5e56b] flex items-center justify-center">
+                        <i data-lucide="navigation" width="24" height="24"></i>
+                      </div>
+                      <div>
+                        <h3 data-template-id="layer-two-title" 
+                          class="canva-text mt-0 md:mt-5 text-2xl" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                          Navigation Protocols
+                        </h3>
+                        <ul class="list-disc pl-4 mt-2 text-[16px] lg:text-[12px] text-[#b1c2ba] leading-relaxed">
+                          <li>SLAM algorithm with ultrasonic sensors.</li>
+                          <li>Detection of outer perimeters.</li>
+                          <li>Zig-zag movement pattern.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="relative">
+                    <div class="flex flex-row md:flex-col gap-x-8 items-center md:items-start">
+                      <div class="mt-4 sm:mt-0 w-12 h-12 rounded-full bg-[#315d4f] text-[#c5e56b] flex items-center justify-center">
+                        <i data-lucide="cable" width="24" height="24"></i>
+                      </div>
+                      <div>
+                        <h3 data-template-id="layer-three-title" 
+                          class="canva-text mt-0 md:mt-5 text-2xl" 
+                          style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                          Communication Network
+                        </h3>
+                        <ul class="list-disc pl-4 mt-2 text-[16px] lg:text-[12px] text-[#b1c2ba] leading-relaxed">
+                          <li>Corded wiring with minimal interference.</li>
+                          <li>Enables manual control.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-8 sm:text-right">
+              <img data-template-id="solution-image" 
+                loading="lazy" class="canva-image mt-24 sm:mt-14 sm:mt-14 h-[380px] sm:w-[510px] sm:h-[480px] object-cover" 
+                src="../images/guinn/guinn.png" 
+                alt="Guinn."
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gal" class="gal-section">
+        <div class="relative max-w-full pt-6 sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pb-28">
+          <p data-template-id="iterations-eyebrow" 
+            class="canva-text eyebrow text-[#66b1bb]" 
+            style="font-weight: 700; font-style: normal; font-size: 12px;">
+            Gallery
+          </p>
+          <h2 data-template-id="iterations-title" 
+            class="canva-text mt-4 text-4xl sm:text-5xl leading-tight" 
+            style="color: #009eb3; font-weight: 700; font-style: normal; font-size: 24px;">
+            A closer look.
+          </h2>
+          
+          <div class="relative mt-8 mb-8">
+            <div id="gallery" class="relative flex gap-x-2 overflow-hidden scroll-smooth">
+
+              <!-- Each item -->
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px); max-height: 300px;">
+                <img src="../images/guinn/guinn01.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 1"
+                  onclick="openModal(0)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn02.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 2"
+                  onclick="openModal(1)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn03.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 3"
+                  onclick="openModal(2)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn04.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 4"
+                  onclick="openModal(3)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn05.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(4)">
+              </div>
+              
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn06.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(5)">
+              </div>
+              
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn07.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(6)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn08.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(7)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn09.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(8)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn10.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(9)">
+              </div>
+
+              <div class="flex-shrink-0 overflow-hidden rounded-2xl" style="width: calc(33.333% - 6px);">
+                <img src="../images/guinn/guinn11.png" 
+                  class="w-full max-h-[250px] object-cover rounded-2xl cursor-pointer
+                    transform transition duration-300 hover:scale-110" alt="Item 5"
+                  onclick="openModal(10)">
+              </div>
+
+            </div>
+
+            <button onclick="scrollGallery(-1)" 
+              class="absolute left-4 top-1/2 -translate-y-1/2 bg-[#143c55] text-white p-2 rounded-full">
+              ‹
+            </button>
+
+            <button onclick="scrollGallery(1)" 
+              class="absolute right-4 top-1/2 -translate-y-1/2 bg-[#143c55] text-white p-2 rounded-full">
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <div id="imageModal_gallery" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100]">
+        <button onclick="prevImage()" class="absolute left-5 text-white text-3xl">‹</button>
+        <img id="modalImage_gallery" class="rounded-2xl max-w-md sm:max-w-2xl lg:max-w-4xl" src="" alt="Full image">
+        <button onclick="nextImage()" class="absolute right-5 text-white text-3xl">›</button>
+        <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-2xl">✕</button>
+      </div>
+
+      <section id="iterations" class="bg-[#001c2d]">
+        <div class="max-w-full pt-32 sm:max-w-4xl lg:max-w-[1440px] mx-auto px-5 sm:px-8 pb-28">
+          <div class="grid lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-4">
+              <p data-template-id="iterations-eyebrow" 
+                class="canva-text eyebrow text-[#315d4f]" 
+                style="color: #66b1bb; font-weight: 700; font-style: normal; font-size: 12px;">
+                Iterations
+              </p>
+              <h2 data-template-id="iterations-title" 
+                class="canva-text mt-4 text-4xl sm:text-5xl leading-tight" 
+                style="color: #009eb3; font-weight: 700; font-style: normal; font-size: 24px;">
+                Evolving systems.
+              </h2>
+              <p data-template-id="iterations-copy" 
+                class="canva-text mt-5 leading-relaxed text-[#52635b]" 
+                style="color: #b1c2ba; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">
+                Guinn has been through 3 separate version. With each upgrade, the robo-cleaner is becoming more capable.  
+                The final version of the chassis is manufactured with 316 steel plates, aluminum tubes and additional PETG 3D prints.
+                It is completed with a custom-made rubber scraper and a vacuum chamber made with acrylic tube and PETG 3D prints.
+              </p>
+            </div>
+
+            <div class="lg:col-span-8 grid md:grid-cols-2 gap-6">
+              <article data-template-id="iteration-one"
+                onclick="document.getElementById('imageModal1').classList.remove('hidden')"  
+                class="canva-card bg-[#f6f5ef] rounded-[1.5rem] overflow-hidden cursor-pointer 
+                  hover:scale-[1.02] hover:shadow-2xl" 
+                style="background: #000000;">
+                <img data-template-id="iteration-one-image" loading="lazy" 
+                  class="canva-image w-full h-[420px] object-cover" 
+                  src="../images/guinn/iteration_cha.jpg" 
+                  alt="CADs."
+                >
+                <div class="p-6">
+                  <h3 data-template-id="iteration-one-title" 
+                    class="canva-text text-2xl" 
+                    style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                    Chassis designs.
+                  </h3>
+                </div>
+              </article>
+              
+              <div id="imageModal1" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <img class="rounded-xl max-w-md sm:max-w-lg" 
+                    src="../images/guinn/iteration_cha.jpg" 
+                    alt="Full image">
+                <button onclick="document.getElementById('imageModal1').classList.add('hidden')" 
+                  class="absolute top-5 right-5 text-white text-2xl">✕
+                </button>
+              </div>
+
+              <article data-template-id="iteration-two"
+                onclick="document.getElementById('imageModal2').classList.remove('hidden')" 
+                class="canva-card bg-[#f6f5ef] rounded-[1.5rem] overflow-hidden cursor-pointer 
+                  hover:scale-[1.02] hover:shadow-2xl" 
+                style="background: #000000;">
+                <img data-template-id="iteration-two-image" loading="lazy" 
+                  class="canva-image w-full h-[420px] object-cover" 
+                  src="../images/guinn/iteration_vac.jpg" 
+                  alt="Prototypes."
+                >
+                <div class="p-6">
+                  <h3 data-template-id="iteration-two-title" 
+                    class="canva-text text-2xl" 
+                    style="color: #009eb3; font-weight: 600; font-style: normal; font-size: 19px;">
+                    Vacuum Chambers.
+                  </h3>
+                </div>
+              </article>
+
+              <div id="imageModal2" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <img class="rounded-xl max-w-md sm:max-w-lg" 
+                    src="../images/guinn/iteration_vac.jpg" 
+                    alt="Full image">
+                <button onclick="document.getElementById('imageModal2').classList.add('hidden')" 
+                  class="absolute top-5 right-5 text-white text-2xl">✕
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="w-full bg-[#0a161e] text-white py-7">
+      <div class="max-w-full lg:max-w-[1440px] mx-auto px-5 sm:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-5 text-sm">
+          <p data-template-id="footer-note" 
+            class="canva-text text-base font-medium" 
+            style="color: white; font-weight: 400; font-style: normal; font-size: 16px;">
+            Guinn · Say goodbye to algae.
+          </p>
+          <div class="flex grid-col-2 gap-16">
+            <a href="../html/Index.html#projects" class="inline-flex items-center gap-1 text-base text-white font-bold hover:text-[#66b1bb]"> 
+              <i data-lucide="chevron-left" class="w-5 h-5" stroke-width="3"></i>
+              Other Projects
+            </a>
+            <a href="#top" class="inline-flex items-center gap-1 text-base text-white font-bold hover:text-[#66b1bb]"> Back to top 
+              <i data-lucide="arrow-up" class="w-5 h-5" stroke-width="3"></i> 
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+
+    <script src="/_sdk/f344579cd2b2cf70.editing_sdk.js" integrity="sha512-bzdgmfJ/pl/acJqgk+LGvYwJbF03Y2d6f4oZHD96WjqTnvQUZBGVAQkTDRz+fyIMjVc+AXkpwFXqDYLeHDMLSw=="></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+
+        const toggle = document.getElementById("menu-toggle");
+        const links = document.getElementById("project-links");
+
+        toggle.addEventListener("click", function () {
+          const open = links.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+
+        links.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            links.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      // Scroll effect
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+
+    <script>
+      function scrollGallery(direction) {
+        const gallery = document.getElementById('gallery');
+        const item = gallery.querySelector('div'); // first item
+        const itemWidth = item.offsetWidth;
+
+        // If you’re using gap-x-2 (≈8px), add it here:
+        const style = window.getComputedStyle(gallery);
+        const gap = parseInt(style.columnGap) || 0;
+
+        // Scroll by exactly one item
+        gallery.scrollBy({
+          left: direction * (itemWidth + gap),
+          behavior: 'smooth'
+        });
+      }
+    </script>
+
+    <script>
+      const images = [
+        "../images/guinn/guinn01.png",
+        "../images/guinn/guinn02.png",
+        "../images/guinn/guinn03.png",
+        "../images/guinn/guinn04.png",
+        "../images/guinn/guinn05.png",
+        "../images/guinn/guinn06.png",
+        "../images/guinn/guinn07.png",
+        "../images/guinn/guinn08.png",
+        "../images/guinn/guinn09.png",
+        "../images/guinn/guinn10.png",
+        "../images/guinn/guinn11.png"
+      ];
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        document.getElementById('modalImage_gallery').src = images[currentIndex];
+        document.getElementById('imageModal_gallery').classList.remove('hidden');
+      }
+
+      function closeModal() {
+        document.getElementById('imageModal_gallery').classList.add('hidden');
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById('modalImage_gallery').src = images[currentIndex];
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('modalImage_gallery').src = images[currentIndex];
+      }
+    </script>
+
+  </div>
+</body>
+</html>
